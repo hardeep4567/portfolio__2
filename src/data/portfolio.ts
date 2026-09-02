@@ -252,5 +252,6 @@ export const navLinks = [
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "education", label: "Education" },
+  { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" },
 ];
