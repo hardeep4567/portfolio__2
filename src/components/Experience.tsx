@@ -11,7 +11,7 @@ export default function Experience() {
         aria-hidden
       />
 
-      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+      <div className="mx-auto max-w-5xl px-4 min-[370px]:px-5 sm:px-8">
         <SectionHeading
           eyebrow="Career Path"
           title={
@@ -46,7 +46,7 @@ export default function Experience() {
                     className={`md:w-[calc(50%-2.5rem)] ${leftSide ? "md:mr-auto" : "md:ml-auto"}`}
                     delay={80}
                   >
-                    <article className="glass group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-xl hover:shadow-black/40 sm:p-7">
+                    <article className="glass group relative overflow-hidden rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-xl hover:shadow-black/40 min-[370px]:p-6 sm:p-7">
                       <div
                         className={`pointer-events-none absolute -top-16 -right-16 h-36 w-36 rounded-full bg-gradient-to-br ${job.gradient} opacity-[0.12] blur-2xl transition-opacity duration-500 group-hover:opacity-25`}
                         aria-hidden

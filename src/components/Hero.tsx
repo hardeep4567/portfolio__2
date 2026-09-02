@@ -57,18 +57,18 @@ export default function Hero() {
   const typed = useTypewriter(roles);
 
   return (
-    <section id="home" aria-label="Introduction" className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+    <section id="home" aria-label="Introduction" className="relative overflow-hidden pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-24 lg:pt-40 lg:pb-28">
       {/* Background decor */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div className="bg-grid mask-radial absolute inset-0" />
-        <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-indigo-600/25 blur-[130px] animate-blob" />
-        <div className="absolute top-24 -right-32 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[130px] animate-blob [animation-delay:-6s]" />
-        <div className="absolute bottom-0 left-1/3 h-[360px] w-[360px] rounded-full bg-violet-600/20 blur-[130px] animate-blob [animation-delay:-12s]" />
+        <div className="absolute -top-24 -left-28 h-72 w-72 rounded-full bg-indigo-600/25 blur-[90px] animate-blob sm:-top-32 sm:-left-32 sm:h-[480px] sm:w-[480px] sm:blur-[130px]" />
+        <div className="absolute top-20 -right-28 h-72 w-72 rounded-full bg-cyan-500/20 blur-[90px] animate-blob [animation-delay:-6s] sm:top-24 sm:-right-32 sm:h-[420px] sm:w-[420px] sm:blur-[130px]" />
+        <div className="absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-violet-600/20 blur-[90px] animate-blob [animation-delay:-12s] sm:left-1/3 sm:h-[360px] sm:w-[360px] sm:blur-[130px]" />
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         {/* ------- Left: copy ------- */}
-        <div className="animate-fade-up">
+        <div className="min-w-0 animate-fade-up text-center sm:text-left">
           <span className="inline-flex items-center gap-2.5 rounded-full border border-emerald-400/25 bg-emerald-400/[0.07] px-4 py-1.5 text-xs font-medium text-emerald-300">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
@@ -77,12 +77,12 @@ export default function Hero() {
             Available for opportunities
           </span>
 
-          <h1 className="mt-6 font-display text-4xl leading-[1.1] font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mt-6 break-words font-display text-4xl leading-[1.1] font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Hi, I&apos;m{" "}
             <span className="text-gradient">{personal.firstName} {personal.lastName}</span>
           </h1>
 
-          <p className="mt-4 font-mono text-lg text-slate-200 sm:text-xl" aria-live="polite">
+          <p className="mx-auto mt-4 min-h-7 max-w-full font-mono text-base text-slate-200 sm:mx-0 sm:text-xl" aria-live="polite">
             <span className="text-slate-500">&gt;_ </span>
             {typed}
             <span className="ml-0.5 inline-block w-[2px] animate-caret bg-cyan-400 align-middle text-transparent" aria-hidden>
@@ -90,32 +90,32 @@ export default function Hero() {
             </span>
           </p>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate-400 sm:mx-0 sm:text-lg">
             Full Stack Developer specializing in the MERN stack and Next.js with 1 year of
             experience — building scalable web applications, robust REST APIs and seamless
             user experiences.
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-col items-stretch gap-3 min-[420px]:flex-row min-[420px]:justify-center sm:mt-9 sm:justify-start sm:gap-4">
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 via-indigo-500 to-cyan-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-indigo-500/40"
+              className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 via-indigo-500 to-cyan-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-indigo-500/40"
             >
               View Projects
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-3.5 text-sm font-semibold text-slate-200 backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.08] hover:text-white"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-3.5 text-sm font-semibold text-slate-200 backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.08] hover:text-white"
             >
               Contact Me
             </a>
           </div>
 
-          <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <div className="mt-8 flex flex-col items-center gap-x-6 gap-y-4 sm:mt-9 sm:flex-row sm:flex-wrap">
             <SocialLinks />
             <div className="hidden h-8 w-px bg-white/10 sm:block" aria-hidden />
-            <p className="font-mono text-xs text-slate-500">
+            <p className="text-center font-mono text-xs leading-6 text-slate-500 sm:text-left">
               React <span className="text-slate-600">·</span> Next.js{" "}
               <span className="text-slate-600">·</span> Node.js{" "}
               <span className="text-slate-600">·</span> MongoDB
@@ -124,34 +124,34 @@ export default function Hero() {
         </div>
 
         {/* ------- Right: code editor visual ------- */}
-        <div className="relative mx-auto w-full max-w-lg animate-fade-up [animation-delay:150ms] lg:max-w-none">
+        <div className="relative mx-auto w-full max-w-lg min-w-0 animate-fade-up [animation-delay:150ms] lg:max-w-none">
           {/* Glow ring */}
           <div
             className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-indigo-500/30 via-transparent to-cyan-500/30 blur-2xl"
             aria-hidden
           />
 
-          <div className="glass relative rounded-2xl shadow-2xl shadow-black/50">
+          <div className="glass relative overflow-hidden rounded-2xl shadow-2xl shadow-black/50">
             {/* Window chrome */}
-            <div className="flex items-center justify-between border-b border-white/[0.07] px-5 py-3.5">
+            <div className="flex items-center justify-between gap-3 border-b border-white/[0.07] px-3 py-3 sm:px-5 sm:py-3.5">
               <div className="flex items-center gap-2" aria-hidden>
                 <span className="h-3 w-3 rounded-full bg-rose-500/80" />
                 <span className="h-3 w-3 rounded-full bg-amber-400/80" />
                 <span className="h-3 w-3 rounded-full bg-emerald-400/80" />
               </div>
-              <span className="font-mono text-xs text-slate-400">developer.ts</span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/10 px-2.5 py-1 font-mono text-[10px] text-emerald-300">
+              <span className="min-w-0 truncate font-mono text-xs text-slate-400">developer.ts</span>
+              <span className="hidden shrink-0 items-center gap-1.5 rounded-full bg-emerald-400/10 px-2.5 py-1 font-mono text-[10px] text-emerald-300 min-[360px]:inline-flex">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden />
                 ready
               </span>
             </div>
 
             {/* Code */}
-            <div className="overflow-x-auto px-5 py-5 font-mono text-[13px] leading-7 sm:text-sm">
+            <div className="overflow-x-auto px-3 py-4 font-mono text-xs leading-6 sm:px-5 sm:py-5 sm:text-sm sm:leading-7">
               {codeLines.map((line, i) => (
                 <div key={i} className="flex">
-                  <span className="w-7 shrink-0 text-right text-slate-600 select-none">{i + 1}</span>
-                  <pre className="pl-4">
+                  <span className="w-6 shrink-0 text-right text-slate-600 select-none sm:w-7">{i + 1}</span>
+                  <pre className="min-w-max pl-3 sm:pl-4">
                     <code>
                       <span className="text-slate-600">{"  ".repeat(line.indent)}</span>
                       {line.tokens.map((token, j) => (
@@ -164,8 +164,8 @@ export default function Hero() {
                 </div>
               ))}
               <div className="flex">
-                <span className="w-7 shrink-0 text-right text-slate-600 select-none">9</span>
-                <span className="pl-4">
+                <span className="w-6 shrink-0 text-right text-slate-600 select-none sm:w-7">9</span>
+                <span className="pl-3 sm:pl-4">
                   <span className="ml-1 inline-block h-4 w-2 translate-y-0.5 animate-caret bg-cyan-400" aria-hidden />
                 </span>
               </div>
@@ -173,7 +173,7 @@ export default function Hero() {
           </div>
 
           {/* Floating tech badges */}
-          <div aria-hidden className="absolute inset-0 hidden sm:block">
+          <div aria-hidden className="absolute inset-0 hidden lg:block">
             {floatingBadges.map((badge) => (
               <span
                 key={badge.label}
@@ -198,7 +198,7 @@ export default function Hero() {
       </a>
 
       {/* Quick trust row */}
-      <div className="relative mx-auto mt-16 flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-5 sm:px-8">
+      <div className="relative mx-auto mt-12 flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-3 px-4 sm:mt-16 sm:gap-x-8 sm:px-8">
         {["Clean Code", "REST APIs", "MERN & Next.js", "Responsive UI"].map((item) => (
           <span key={item} className="inline-flex items-center gap-2 text-xs font-medium text-slate-500 sm:text-sm">
             <CircleCheck className="h-4 w-4 text-emerald-400/80" aria-hidden />

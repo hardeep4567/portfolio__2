@@ -12,7 +12,7 @@ export default function Footer() {
         aria-hidden
       />
 
-      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-10 min-[370px]:px-5 min-[370px]:py-12 sm:px-8">
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           {/* Brand */}
           <div className="text-center md:text-left">
@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Quick links */}
           <nav aria-label="Footer navigation">
-            <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 min-[370px]:gap-x-6">
               {navLinks.map(({ id, label }) => (
                 <li key={id}>
                   <a

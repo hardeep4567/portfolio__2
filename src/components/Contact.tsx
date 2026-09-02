@@ -115,7 +115,7 @@ export default function Contact() {
         aria-hidden
       />
 
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-4 min-[370px]:px-5 sm:px-8">
         <SectionHeading
           eyebrow="Contact"
           title={
@@ -179,7 +179,7 @@ export default function Contact() {
           <Reveal delay={120}>
             <form
               onSubmit={handleSubmit}
-              className="glass relative overflow-hidden rounded-2xl p-7 sm:p-8"
+              className="glass relative overflow-hidden rounded-2xl p-5 min-[370px]:p-7 sm:p-8"
               aria-label="Contact form"
             >
               <div

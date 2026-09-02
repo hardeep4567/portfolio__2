@@ -11,7 +11,7 @@ export default function Education() {
         aria-hidden
       />
 
-      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+      <div className="mx-auto max-w-5xl px-4 min-[370px]:px-5 sm:px-8">
         <SectionHeading
           eyebrow="Education"
           title={
@@ -22,7 +22,7 @@ export default function Education() {
         />
 
         <Reveal>
-          <article className="glass group relative overflow-hidden rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-xl hover:shadow-black/40 sm:p-10">
+          <article className="glass group relative overflow-hidden rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-xl hover:shadow-black/40 min-[370px]:p-7 sm:p-10">
             <div
               className="pointer-events-none absolute -top-20 -right-20 h-52 w-52 rounded-full bg-gradient-to-br from-violet-500/15 to-cyan-500/15 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
               aria-hidden

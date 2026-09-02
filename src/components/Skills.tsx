@@ -12,7 +12,7 @@ export default function Skills() {
         aria-hidden
       />
 
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-4 min-[370px]:px-5 sm:px-8">
         <SectionHeading
           eyebrow="Tech Stack"
           title={
@@ -26,7 +26,7 @@ export default function Skills() {
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {skillGroups.map((group, gi) => (
             <Reveal key={group.title} delay={gi * 100}>
-              <div className="glass group relative h-full overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:shadow-xl hover:shadow-black/40">
+              <div className="glass group relative h-full overflow-hidden rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:shadow-xl hover:shadow-black/40 min-[370px]:p-6">
                 <div
                   className={`pointer-events-none absolute -top-14 -right-14 h-36 w-36 rounded-full bg-gradient-to-br ${group.gradient} opacity-[0.12] blur-2xl transition-opacity duration-500 group-hover:opacity-25`}
                   aria-hidden

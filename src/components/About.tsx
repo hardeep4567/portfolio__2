@@ -20,7 +20,7 @@ const facts = [
 export default function About() {
   return (
     <section id="about" aria-label="About me" className="relative scroll-mt-24 py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-4 min-[370px]:px-5 sm:px-8">
         <SectionHeading
           eyebrow="About Me"
           title={
@@ -63,7 +63,7 @@ export default function About() {
 
           {/* ------- Quick facts card ------- */}
           <Reveal delay={120}>
-            <div className="glass relative overflow-hidden rounded-2xl p-7">
+            <div className="glass relative overflow-hidden rounded-2xl p-5 min-[370px]:p-7">
               <div
                 className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-indigo-500/20 blur-3xl"
                 aria-hidden
@@ -103,7 +103,7 @@ export default function About() {
             {personal.stats.map((stat) => (
               <div
                 key={stat.label}
-                className="glass group rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-white/20"
+                className="glass group rounded-2xl p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-white/20 min-[370px]:p-6"
               >
                 <dd className="text-gradient font-display text-3xl font-bold sm:text-4xl">{stat.value}</dd>
                 <dt className="mt-2 text-xs font-medium tracking-wide text-slate-500 uppercase sm:text-sm">

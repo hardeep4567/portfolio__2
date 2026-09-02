@@ -88,7 +88,7 @@ export default function Projects() {
         aria-hidden
       />
 
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-4 min-[370px]:px-5 sm:px-8">
         <SectionHeading
           eyebrow="Portfolio"
           title={
