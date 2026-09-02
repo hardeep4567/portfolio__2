@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navLinks, personal } from "../data/portfolio";
 import { cn } from "../utils/cn";
-import { GithubIcon, LinkedinIcon } from "./icons";
+import { LinkedinIcon } from "./icons";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -95,15 +95,6 @@ export default function Navbar() {
         {/* Desktop CTA + socials */}
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href={personal.github}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="GitHub profile"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:text-white"
-          >
-            <GithubIcon className="h-4.5 w-4.5" />
-          </a>
-          <a
             href={personal.linkedin}
             target="_blank"
             rel="noreferrer noopener"
@@ -113,7 +104,9 @@ export default function Navbar() {
             <LinkedinIcon className="h-4.5 w-4.5" />
           </a>
           <a
-            href="#contact"
+            href={`https://wa.me/${personal.phone.replace(/\D/g, "")}?text=${encodeURIComponent("Hi Hardeep, I would like to hire you for a project.")}`}
+            target="_blank"
+            rel="noreferrer noopener"
             className="rounded-lg bg-gradient-to-r from-indigo-500 via-indigo-500 to-cyan-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-indigo-500/40"
           >
             Hire Me
@@ -168,7 +161,9 @@ export default function Navbar() {
           ))}
           <li className="pt-3">
             <a
-              href="#contact"
+              href={`https://wa.me/${personal.phone.replace(/\D/g, "")}?text=${encodeURIComponent("Hi Hardeep, I would like to hire you for a project.")}`}
+              target="_blank"
+              rel="noreferrer noopener"
               onClick={() => setOpen(false)}
               className="block rounded-lg bg-gradient-to-r from-indigo-500 to-cyan-500 px-4 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-indigo-500/25"
             >

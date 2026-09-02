@@ -1,9 +1,14 @@
 import { useState, type FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 import { CircleCheck, Mail, MapPin, Phone, Send } from "lucide-react";
 import { personal } from "../data/portfolio";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import { GithubIcon, LinkedinIcon } from "./icons";
+import { LinkedinIcon, WhatsappIcon } from "./icons";
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
 
 const channels = [
   {
@@ -21,6 +26,13 @@ const channels = [
     hover: "hover:border-emerald-400/40 hover:text-emerald-300",
   },
   {
+    icon: WhatsappIcon,
+    label: "WhatsApp",
+    value: personal.phone,
+    href: `https://wa.me/${personal.phone.replace(/\D/g, "")}`,
+    hover: "hover:border-emerald-400/40 hover:text-emerald-300",
+  },
+  {
     icon: MapPin,
     label: "Location",
     value: personal.location,
@@ -33,13 +45,6 @@ const channels = [
     href: personal.linkedin,
     hover: "hover:border-sky-400/40 hover:text-sky-300",
   },
-  {
-    icon: GithubIcon,
-    label: "GitHub",
-    value: personal.githubLabel,
-    href: personal.github,
-    hover: "hover:border-white/30 hover:text-white",
-  },
 ];
 
 const inputClasses =
@@ -48,21 +53,59 @@ const inputClasses =
 export default function Contact() {
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const name = String(data.get("name") ?? "");
-    const email = String(data.get("email") ?? "");
-    const subject = String(data.get("subject") ?? "");
-    const message = String(data.get("message") ?? "");
 
-    const body = encodeURIComponent(`Hi Hardeep,\n\n${message}\n\n— ${name} (${email})`);
-    const mailto = `mailto:${personal.email}?subject=${encodeURIComponent(subject || "Portfolio Inquiry")}&body=${body}`;
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = String(data.get("name") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const subject = String(data.get("subject") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
 
-    window.location.href = mailto;
-    setSent(true);
-    e.currentTarget.reset();
-    window.setTimeout(() => setSent(false), 6000);
+    if (!name || !email || !message) {
+      return;
+    }
+
+    const mailSubject = subject || "Portfolio Inquiry";
+    const mailBody = `Hi Hardeep,\n\n${message}\n\n— ${name} (${email})`;
+    const mailto = `mailto:${personal.email}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+    try {
+      if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY) {
+        await emailjs.send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          {
+            from_name: name,
+            from_email: email,
+            subject: mailSubject,
+            message,
+            to_email: personal.email,
+          },
+          EMAILJS_PUBLIC_KEY,
+        );
+      } else {
+        const mailLink = document.createElement("a");
+        mailLink.href = mailto;
+        mailLink.style.display = "none";
+        document.body.appendChild(mailLink);
+        mailLink.click();
+        document.body.removeChild(mailLink);
+      }
+    } catch (error) {
+      console.error("EmailJS send failed:", error);
+      const mailLink = document.createElement("a");
+      mailLink.href = mailto;
+      mailLink.style.display = "none";
+      document.body.appendChild(mailLink);
+      mailLink.click();
+      document.body.removeChild(mailLink);
+    } finally {
+      setSent(true);
+      form.reset();
+      window.setTimeout(() => setSent(false), 6000);
+    }
   };
 
   return (
@@ -196,7 +239,7 @@ export default function Contact() {
                   }`}
                 >
                   <CircleCheck className="h-4 w-4" aria-hidden />
-                  Opening your mail app — thanks for reaching out!
+                  Message sent successfully — thanks for reaching out!
                 </p>
               </div>
             </form>

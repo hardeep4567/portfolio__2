@@ -207,6 +207,7 @@ export const projects: Project[] = [
     description:
       "Resume builder platform with customizable templates, real-time resume preview, dynamic forms and PDF export functionality, enhanced with GenAI assistance.",
     tech: ["React.js", "Node.js", "MongoDB", "GenAI"],
+    live:"https://the-ai-resume-builder.netlify.app/",
     accent: "from-violet-500/20 to-fuchsia-500/10",
   },
   {
@@ -214,6 +215,7 @@ export const projects: Project[] = [
     description:
       "Voting management system for voter records, candidate information, constituency-wise voting data and election results — with secure APIs, vote tracking, result aggregation and database query optimization.",
     tech: ["Next.js", "Node.js", "Express.js", "MySQL"],
+    live:"https://cadre.codeit.cloud/login",
     accent: "from-amber-500/20 to-orange-500/10",
   },
   {

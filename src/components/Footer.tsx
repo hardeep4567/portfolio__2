@@ -1,6 +1,6 @@
 import { ArrowUp, Mail } from "lucide-react";
 import { navLinks, personal } from "../data/portfolio";
-import { GithubIcon, LinkedinIcon } from "./icons";
+import { LinkedinIcon } from "./icons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -42,15 +42,6 @@ export default function Footer() {
 
           {/* Socials + top */}
           <div className="flex items-center gap-3">
-            <a
-              href={personal.github}
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="GitHub profile"
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-400 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:text-white"
-            >
-              <GithubIcon className="h-4.5 w-4.5" />
-            </a>
             <a
               href={personal.linkedin}
               target="_blank"
