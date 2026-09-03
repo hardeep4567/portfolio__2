@@ -24,8 +24,8 @@ export const personal = {
   email: "singh123hardeep546@gmail.com",
   phone: "+91-6280666620",
   phoneHref: "tel:+916280666620",
-  linkedin: "https://linkedin.com/in/hardeep-singh",
-  linkedinLabel: "linkedin.com/in/hardeep-singh",
+  linkedin: "https://www.linkedin.com/in/hardeep-singh-3762ab2ba/",
+  linkedinLabel: "https://www.linkedin.com/in/hardeep-singh-3762ab2ba/",
   github: "https://github.com/hardeep4567",
   githubLabel: "github.com/hardeep4567",
   about: [
