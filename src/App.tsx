@@ -4,6 +4,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import Github from "./components/Github";
 import Education from "./components/Education";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
@@ -33,6 +34,7 @@ export default function App() {
         <Skills />
         <Experience />
         <Projects />
+        <Github />
         <Education />
         <Resume />
         <Contact />

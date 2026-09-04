@@ -131,7 +131,7 @@ export default function Navbar() {
         id="mobile-menu"
         className={cn(
           "overflow-hidden border-t border-white/5 transition-[max-height,opacity] duration-300 ease-out lg:hidden",
-          open ? "max-h-[480px] opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-[calc(100vh-5rem)] overflow-y-auto opacity-100" : "max-h-0 overflow-y-hidden opacity-0"
         )}
       >
         <ul className="glass-strong space-y-1 px-5 py-5">
@@ -165,7 +165,7 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer noopener"
               onClick={() => setOpen(false)}
-              className="block rounded-lg bg-gradient-to-r from-indigo-500 to-cyan-500 px-4 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-indigo-500/25"
+              className="flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 to-cyan-500 px-4 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:brightness-110"
             >
               Hire Me
             </a>

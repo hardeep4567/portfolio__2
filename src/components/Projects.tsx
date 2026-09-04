@@ -1,12 +1,12 @@
 import { ArrowUpRight, FolderGit2 } from "lucide-react";
-import { personal, projects, type Project } from "../data/portfolio";
+import { projects, type Project } from "../data/portfolio";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
   return (
     <article
-      className={`glass group relative flex h-full flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:shadow-2xl hover:shadow-black/50 ${
+      className={`glass group relative flex h-full w-full min-w-0 flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:shadow-2xl hover:shadow-black/50 ${
         featured ? "lg:flex-row" : ""
       }`}
     >

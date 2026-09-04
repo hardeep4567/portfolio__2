@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
 import { personal } from "../data/portfolio";
 import { cn } from "../utils/cn";
-import { LinkedinIcon } from "./icons";
+import { GithubIcon, LinkedinIcon } from "./icons";
 
 interface SocialLinksProps {
   className?: string;
@@ -19,6 +19,11 @@ export default function SocialLinks({
       label: "LinkedIn",
       href: personal.linkedin,
       icon: LinkedinIcon,
+    },
+    {
+      label: "GitHub",
+      href: personal.github,
+      icon: GithubIcon,
     },
     {
       label: "Email",

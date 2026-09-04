@@ -19,7 +19,7 @@ export default function Experience() {
               Work <span className="text-gradient">Experience</span>
             </>
           }
-          description="A year of hands-on development — shipping live products, building secure backends and learning how real-world software is delivered."
+          description="A focused year of hands-on development, contributing to live products, improving backend reliability, and building user-facing features that work in production."
         />
 
         <div className="relative">

@@ -25,7 +25,7 @@ export default function About() {
           eyebrow="About Me"
           title={
             <>
-              A developer who cares about <span className="text-gradient">clean, working software</span>
+              Full-stack developer focused on <span className="text-gradient">practical, high-quality software</span>
             </>
           }
         />
@@ -55,7 +55,7 @@ export default function About() {
                 href="#contact"
                 className="group inline-flex items-center gap-2 pt-2 text-sm font-semibold text-cyan-300 transition-colors hover:text-cyan-200"
               >
-                Let&apos;s work together
+                Let&apos;s build something impactful
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden />
               </a>
             </div>

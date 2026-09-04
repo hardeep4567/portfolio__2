@@ -1,10 +1,10 @@
 import { useState, type FormEvent } from "react";
 import emailjs from "@emailjs/browser";
-import { CircleCheck, Mail, MapPin, Phone, Send } from "lucide-react";
+import { ArrowUpRight, CircleCheck, Mail, MapPin, Phone, Send } from "lucide-react";
 import { personal } from "../data/portfolio";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import { LinkedinIcon, WhatsappIcon } from "./icons";
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from "./icons";
 
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
@@ -44,6 +44,13 @@ const channels = [
     value: personal.linkedinLabel,
     href: personal.linkedin,
     hover: "hover:border-sky-400/40 hover:text-sky-300",
+  },
+  {
+    icon: GithubIcon,
+    label: "GitHub",
+    value: personal.githubLabel,
+    href: personal.github,
+    hover: "hover:border-slate-300/40 hover:text-white",
   },
 ];
 
@@ -136,17 +143,17 @@ export default function Contact() {
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-cyan-300 transition-colors duration-300">
                       <Icon className="h-5 w-5" aria-hidden />
                     </span>
-                    <span className="min-w-0">
+                    <span className="min-w-0 flex-1">
                       <span className="block text-xs font-medium tracking-wide text-slate-500 uppercase">
                         {label}
                       </span>
-                      <span className="block truncate text-sm font-medium text-slate-200">
+                      <span className="block break-all text-sm font-medium text-slate-200">
                         {value}
                       </span>
                     </span>
                   </>
                 );
-                const classes = `group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.06] ${hover}`;
+                const classes = `group flex w-full min-w-0 items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.06] ${hover}`;
 
                 return href ? (
                   <a
@@ -187,6 +194,8 @@ export default function Contact() {
                 aria-hidden
               />
               <div className="relative">
+             
+
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="mb-2 block text-xs font-medium tracking-wide text-slate-400 uppercase">

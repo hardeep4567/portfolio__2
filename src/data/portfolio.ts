@@ -29,8 +29,8 @@ export const personal = {
   github: "https://github.com/hardeep4567",
   githubLabel: "github.com/hardeep4567",
   about: [
-    "I am a highly motivated Full Stack Developer with 1 year of experience, skilled in JavaScript, Next.js, Node.js, Express.js, and MongoDB. I enjoy building scalable web applications, RESTful APIs and seamless user experiences.",
-    "I have strong debugging and problem-solving skills and focus on writing clean, efficient and maintainable code. I have worked on live production projects and cross-functional teams, contributing to everything from pixel-perfect frontend interfaces to robust backend services and optimized database queries.",
+    "I am a Full Stack Developer with 1+ years of hands-on experience building responsive web applications, scalable APIs, and production-ready digital solutions using JavaScript, Next.js, Node.js, Express.js, and MongoDB.",
+    "My work focuses on solving real business problems through clean architecture, maintainable code, and strong collaboration with cross-functional teams. I enjoy turning product requirements into intuitive user experiences and reliable backend systems that perform well in live environments.",
   ],
   focus: [
     "Full-stack web development with MERN & Next.js",
@@ -251,6 +251,7 @@ export const navLinks = [
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
+  { id: "github", label: "GitHub" },
   { id: "education", label: "Education" },
   { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" },
