@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks";
 import TechIcon from "./TechIcon";
 
 const roles = ["Full Stack Developer", "MERN Stack Engineer", "Next.js Developer", "Frontend Engineer"];
-const profileImage = "/WhatsApp Image 2026-09-03 at 9.37.38 PM.png";
+const profileImage = "/WhatsApp Image 2026-10-25 at 6.46.46 PM.jpeg";
 
 function useTypewriter(words: string[]) {
   const [text, setText] = useState("");
